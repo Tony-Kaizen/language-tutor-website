@@ -32,3 +32,12 @@ questions.forEach(question => {
   });
 });
 /* Frequently Asked Questions */
+
+/* Footer */
+const now = new Date();
+const year = now.getFullYear();
+const yearEl = document.querySelector('#year');
+
+yearEl.innerHTML = year;
+console.log(yearEl);
+/* Footer */

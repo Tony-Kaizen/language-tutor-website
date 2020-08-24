@@ -204,6 +204,10 @@ Navbar
   width: 100%;
 }
 
+.nav h2 {
+  margin-bottom: 0;
+}
+
 .nav-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -502,16 +506,35 @@ F.A.Q.
   display: none;
 }
 
-
-
-/* .section-center {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
+/*
+=============== 
+F.A.Q.
+===============
+*/
+.footer {
   display: grid;
-  gap: 3rem 2rem;
+  place-items: center;
+  padding-bottom: 2rem;
+  background-color: var(--clr-black);
+}
+
+.footer-icons {
+  width: 30rem;
   justify-items: center;
-} */
+  margin-bottom: 2rem;
+}
+
+.footer-social-icon {
+  font-size: 2rem;
+  color: var(--clr-gold);
+  transition: var(--transition);
+}
+
+.footer-social-icon:hover {
+  font-size: 2rem;
+  color: var(--clr-white);
+  transition: var(--transition);
+}
 
 
 /*
