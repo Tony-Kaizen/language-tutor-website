@@ -67,6 +67,12 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+
+::selection {
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
+
 body {
   font-family: var(--ff-secondary);
   background: var(--clr-grey-10);
@@ -195,6 +201,7 @@ main {
   display: grid;
   place-items: center;
 }
+
 /*
 =============== 
 Navbar
@@ -274,7 +281,7 @@ Sidebar nav
 }
 
 .close-btn:hover {
-  color: var(--clr-red-dark);
+  color: var(--clr-red-light);
   background-color: transparent;
   border: none;
   font-size: 3rem;
@@ -289,11 +296,20 @@ Sidebar nav
   text-align: center;
 }
 
+.sidebar-links a, .social-icons a {
+  color: var(--clr-black);
+  transition: var(--transition);
+}
+
+.sidebar-links a:hover, .social-icons a:hover {
+  color: var(--clr-gold);
+}
+
 .sidebar-links li {
   margin: 2rem auto;
 }
 
-.sidebar-links a {
+.sidebar-links a {  
   font-size: 3rem; 
   margin-bottom: 2rem;
   padding: .5rem 10rem; 
@@ -325,10 +341,6 @@ Header / Hero
   display: grid;
   place-items: center;  
   padding-top: 8rem;
-}
-
-.hero-info {
-  width: 95%;
 }
 
 .hero-info .underline {
@@ -381,6 +393,21 @@ Header / Hero
   position: relative;
   object-fit: cover;
 }
+
+/* // Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) {
+  .hero-center {
+    height: 100vh;
+    display: grid;
+    place-items: center; 
+    grid-template-columns: 1fr 1fr; 
+    padding-top: 8rem;
+  }
+
+  .hero-img {
+    display: block;
+  }
+} */
 
 /*
 =============== 
@@ -594,6 +621,9 @@ Footer
   width: 30rem;
   justify-items: center;
   margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 4rem;
 }
 
 .footer-social-icon {
